@@ -4,12 +4,14 @@ using Microsoft.Extensions.Configuration.EnvironmentVariables;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace examenapi.Entities
 {
-    public class Customers
+    [Table("Customer", Schema = "SalesLT")]
+    public class Customer
     {
         [Key]
         public int CustomerID { get; set; }

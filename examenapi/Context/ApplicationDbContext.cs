@@ -1,7 +1,7 @@
 ﻿using examenapi.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace apiFabesV2.Contexts
+namespace examenapi.Contexts
 {
     public class ApplicationDbContext : DbContext
     {
@@ -9,8 +9,8 @@ namespace apiFabesV2.Contexts
             : base(options)
         { }
 
-        public DbSet<Customers> customer { get; set; }
-        public DbSet<Products> products { get; set; }
+        public DbSet<Customer> customers { get; set; }
+        public DbSet<Product> products { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
